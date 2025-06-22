@@ -4,11 +4,14 @@
   "description": "Personal development website",
   "scripts": {
     "build": "npm run build:sqlite-otel",
-    "build:sqlite-otel": "cd sqlite-otel && docker run --rm -v $(pwd):/docs squidfunk/mkdocs-material:latest build && mkdir -p ../dist/sqlite-otel && cp -r site/* ../dist/sqlite-otel/",
+    "build:sqlite-otel": "mkdir -p dist/sqlite-otel && cp -r sqlite-otel/site/* dist/sqlite-otel/",
     "dev": "npm run build && npx serve dist",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
     "serve": "^14.2.0"
+  },
+  "dependencies": {
+    "wrangler": "^4.20.5"
   }
 }
