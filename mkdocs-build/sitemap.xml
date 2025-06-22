@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/api/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/cli/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/configuration/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/deployment/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/installation/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+    <url>
+         <loc>https://manishs.pages.dev/sqlite-otel/quickstart/</loc>
+         <lastmod>2025-06-22</lastmod>
+    </url>
+</urlset>
