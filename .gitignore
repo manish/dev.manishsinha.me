@@ -1,0 +1,10 @@
+# Build outputs
+dist/
+mkdocs-build/
+
+# Dependencies
+node_modules/
+
+# SQLite OTEL specific
+sqlite-otel/dist/
+sqlite-otel/site/
