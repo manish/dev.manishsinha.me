@@ -20,3 +20,5 @@ This builds documentation from all submodules into `dist/` for Cloudflare Pages 
 🚀 **Live Documentation**: https://manishs.pages.dev/sqlite-otel/
 
 The documentation is automatically built and deployed via Cloudflare Pages.
+
+Build version: v2.1
