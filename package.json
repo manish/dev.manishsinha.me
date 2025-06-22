@@ -1,0 +1,14 @@
+{
+  "name": "dev-manishsinha-me",
+  "version": "1.0.0",
+  "description": "Personal development website",
+  "scripts": {
+    "build": "npm run build:sqlite-otel",
+    "build:sqlite-otel": "cd sqlite-otel && docker run --rm -v $(pwd):/docs squidfunk/mkdocs-material:latest build && mkdir -p ../dist/sqlite-otel && cp -r site/* ../dist/sqlite-otel/",
+    "dev": "npm run build && npx serve dist",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

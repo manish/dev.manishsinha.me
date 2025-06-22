@@ -1,0 +1,3 @@
+[submodule "sqlite-otel"]
+	path = sqlite-otel
+	url = https://github.com/RedShiftVelocity/sqlite-otel.git
