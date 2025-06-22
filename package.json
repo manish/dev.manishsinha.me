@@ -4,7 +4,7 @@
   "description": "Personal development website",
   "scripts": {
     "build": "npm run build:sqlite-otel",
-    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist/sqlite-otel && mkdir -p dist/sqlite-otel/{docs,assets,css,js} && git -C sqlite-otel show main:site/index.html > dist/sqlite-otel/index.html && git -C sqlite-otel show main:site/css/style.css > dist/sqlite-otel/css/style.css && git -C sqlite-otel show main:site/js/main.js > dist/sqlite-otel/js/main.js && git -C sqlite-otel show main:site/assets/favicon.svg > dist/sqlite-otel/assets/favicon.svg && git -C sqlite-otel show main:site/assets/logo.svg > dist/sqlite-otel/assets/logo.svg && cp -r sqlite-otel/site/* dist/sqlite-otel/docs/ && echo 'Build complete - original static site at root, MkDocs docs at /docs/'",
+    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist/sqlite-otel && mkdir -p dist/sqlite-otel/docs && echo 'Extracting original static site from main branch...' && git -C sqlite-otel show main:site/index.html > dist/sqlite-otel/index.html && mkdir -p dist/sqlite-otel/assets dist/sqlite-otel/css dist/sqlite-otel/js && git -C sqlite-otel show main:site/css/style.css > dist/sqlite-otel/css/style.css && git -C sqlite-otel show main:site/js/main.js > dist/sqlite-otel/js/main.js && git -C sqlite-otel show main:site/assets/favicon.svg > dist/sqlite-otel/assets/favicon.svg && git -C sqlite-otel show main:site/assets/logo.svg > dist/sqlite-otel/assets/logo.svg && echo 'Copying MkDocs site to docs folder...' && cp -r sqlite-otel/site/. dist/sqlite-otel/docs/ && echo 'Build complete - original static site at root, MkDocs docs at /docs/'",
     "dev": "npm run build && npx serve dist",
     "clean": "rm -rf dist"
   },
