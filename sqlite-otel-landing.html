@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite OTEL Collector - Lightweight OpenTelemetry Storage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        .header p {
+            font-size: 1.25rem;
+            margin: 0 0 2rem 0;
+            opacity: 0.9;
+        }
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid white;
+        }
+        .features {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2d3748;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .feature {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+        .feature h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #e9ecef;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+        .quick-start {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .quick-start pre {
+            background: #2d3748;
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 2rem auto;
+            text-align: left;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>SQLite OTEL Collector</h1>
+        <p>A lightweight OpenTelemetry collector that stores traces, metrics, and logs in SQLite databases</p>
+        <div class="buttons">
+            <a href="/sqlite-otel/docs/" class="btn btn-primary">📚 Documentation</a>
+            <a href="https://github.com/manish/sqlite-otel" class="btn btn-secondary">⭐ GitHub</a>
+        </div>
+    </div>
+
+    <div class="features">
+        <h2>Why SQLite OTEL?</h2>
+        <div class="feature-grid">
+            <div class="feature">
+                <h3>🪶 Lightweight</h3>
+                <p>No external dependencies. Single binary deployment with embedded SQLite storage. Perfect for edge computing and resource-constrained environments.</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Fast Setup</h3>
+                <p>Get started in seconds. No complex configuration or external databases required. Just download and run.</p>
+            </div>
+            <div class="feature">
+                <h3>🔍 Full Observability</h3>
+                <p>Complete OpenTelemetry support for traces, metrics, and logs. Compatible with all OTLP-enabled applications.</p>
+            </div>
+            <div class="feature">
+                <h3>💾 Efficient Storage</h3>
+                <p>SQLite provides reliable, ACID-compliant storage with automatic data rotation and configurable retention policies.</p>
+            </div>
+            <div class="feature">
+                <h3>🛠️ Developer Friendly</h3>
+                <p>Built-in web UI for browsing telemetry data. Export to Parquet, JSON, or forward to other collectors.</p>
+            </div>
+            <div class="feature">
+                <h3>🏗️ Production Ready</h3>
+                <p>Battle-tested in production environments. Supports high-throughput workloads with automatic batching.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-start">
+        <h2>Quick Start</h2>
+        <pre><code># Download and run
+curl -L https://github.com/manish/sqlite-otel/releases/latest/download/sqlite-otel-linux-amd64 -o sqlite-otel
+chmod +x sqlite-otel
+./sqlite-otel --otlp-grpc=4317 --otlp-http=4318</code></pre>
+        <p>That's it! Your collector is now ready to receive telemetry data.</p>
+        <a href="/sqlite-otel/docs/quickstart/" class="btn btn-primary">View Full Guide</a>
+    </div>
+
+    <div class="footer">
+        <p>SQLite OTEL Collector is open source software. <a href="https://github.com/manish/sqlite-otel">Contribute on GitHub</a></p>
+        <p>© 2024 SQLite OTEL Project</p>
+    </div>
+</body>
+</html>
