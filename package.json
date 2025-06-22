@@ -4,7 +4,7 @@
   "description": "Personal development website",
   "scripts": {
     "build": "npm run build:sqlite-otel",
-    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist && mkdir -p dist && echo 'Copying documentation site...' && cp -r sqlite-otel/site/* dist/ && echo 'Build complete - documentation available at root'",
+    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist && mkdir -p dist/sqlite-otel/docs && echo 'Copying landing page...' && cp index.html dist/ && echo 'Copying SQLite OTEL site...' && cp -r sqlite-otel/site/* dist/sqlite-otel/ && echo 'Copying documentation to docs folder...' && cp -r sqlite-otel/site/* dist/sqlite-otel/docs/ && echo 'Build complete'",
     "dev": "npm run build && npx serve dist",
     "clean": "rm -rf dist"
   },
