@@ -4,7 +4,12 @@
   "description": "Personal development website",
   "scripts": {
     "build": "npm run build:sqlite-otel",
-    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist && mkdir -p dist/sqlite-otel/docs && echo 'Copying landing page...' && cp index.html dist/ && echo 'Copying static site from site/ to /sqlite-otel/...' && cp -r sqlite-otel/site/* dist/sqlite-otel/ && echo 'Copying MkDocs to /sqlite-otel/docs/...' && cp -r sqlite-otel/site/* dist/sqlite-otel/docs/ && echo 'Build complete'",
+    "build:clean": "echo 'Cleaning dist directory...' && rm -rf dist",
+    "build:setup": "echo 'Creating directory structure...' && mkdir -p dist/sqlite-otel/docs dist/sqlite-otel/site",
+    "build:copy-landing": "echo 'Copying landing page...' && cp index.html dist/",
+    "build:copy-site": "echo 'Copying static site from site/ to /sqlite-otel/...' && cp -r sqlite-otel/site/* dist/sqlite-otel/",
+    "build:copy-docs": "echo 'Copying MkDocs to /sqlite-otel/docs/...' && cp -r sqlite-otel/docs/* dist/sqlite-otel/docs/ && echo 'Copying site assets for docs styling...' && cp -r sqlite-otel/site/css sqlite-otel/site/js sqlite-otel/site/assets dist/sqlite-otel/site/",
+    "build:sqlite-otel": "echo 'Starting build...' && npm run build:clean && npm run build:setup && npm run build:copy-landing && npm run build:copy-site && npm run build:copy-docs && echo 'Build complete'",
     "dev": "npm run build && npx serve dist",
     "clean": "rm -rf dist"
   },
