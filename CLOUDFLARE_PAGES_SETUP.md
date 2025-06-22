@@ -33,28 +33,24 @@
 5. **Custom Domain Setup**
    - After initial deployment, go to "Custom domains"
    - Add: `manishs.pages.dev`
-   - The site will be available at:
-     - Main site: https://manishs.pages.dev/
-     - SQLite OTEL docs: https://manishs.pages.dev/sqlite-otel/
+   - The site will be available at: https://manishs.pages.dev/
 
 ## Build Process Details
 
 The build process:
 1. Runs `npm run build` which calls `npm run build:sqlite-otel`
-2. Navigates to sqlite-otel submodule
-3. Runs MkDocs build using Docker
-4. Copies generated site to `../dist/sqlite-otel/`
-5. Cloudflare Pages serves from `dist/` directory
+2. Copies the pre-built documentation from `sqlite-otel/site/` to `dist/`
+3. Cloudflare Pages serves from `dist/` directory
 
 ## Access URLs
 
 Once deployed:
-- **SQLite OTEL Documentation**: https://manishs.pages.dev/sqlite-otel/
-- **Home**: https://manishs.pages.dev/sqlite-otel/
-- **Quick Start**: https://manishs.pages.dev/sqlite-otel/quickstart/
-- **API Reference**: https://manishs.pages.dev/sqlite-otel/api/
-- **CLI Reference**: https://manishs.pages.dev/sqlite-otel/cli/
-- **Deployment Guide**: https://manishs.pages.dev/sqlite-otel/deployment/
+- **SQLite OTEL Documentation**: https://manishs.pages.dev/
+- **Home**: https://manishs.pages.dev/
+- **Quick Start**: https://manishs.pages.dev/quickstart/
+- **API Reference**: https://manishs.pages.dev/api/
+- **CLI Reference**: https://manishs.pages.dev/cli/
+- **Deployment Guide**: https://manishs.pages.dev/deployment/
 
 ## Future Updates
 
@@ -78,4 +74,4 @@ To update documentation:
 ⚠️ **Action Required**: Complete the Cloudflare Pages setup manually:
 1. Go to https://dash.cloudflare.com/pages
 2. Follow the configuration steps above
-3. Deploy and verify at https://manishs.pages.dev/sqlite-otel/
+3. Deploy and verify at https://manishs.pages.dev/
