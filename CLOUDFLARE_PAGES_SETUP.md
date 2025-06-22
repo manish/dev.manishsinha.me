@@ -39,18 +39,21 @@
 
 The build process:
 1. Runs `npm run build` which calls `npm run build:sqlite-otel`
-2. Copies the pre-built documentation from `sqlite-otel/site/` to `dist/`
-3. Cloudflare Pages serves from `dist/` directory
+2. Copies the landing page to `dist/index.html`
+3. Copies the pre-built SQLite OTEL site from `sqlite-otel/site/` to `dist/sqlite-otel/`
+4. Copies the documentation to `dist/sqlite-otel/docs/`
+5. Cloudflare Pages serves from `dist/` directory
 
 ## Access URLs
 
 Once deployed:
-- **SQLite OTEL Documentation**: https://manishs.pages.dev/
-- **Home**: https://manishs.pages.dev/
-- **Quick Start**: https://manishs.pages.dev/quickstart/
-- **API Reference**: https://manishs.pages.dev/api/
-- **CLI Reference**: https://manishs.pages.dev/cli/
-- **Deployment Guide**: https://manishs.pages.dev/deployment/
+- **Landing Page**: https://manishs.pages.dev/
+- **SQLite OTEL Site**: https://manishs.pages.dev/sqlite-otel/
+- **SQLite OTEL Documentation**: https://manishs.pages.dev/sqlite-otel/docs/
+- **Quick Start**: https://manishs.pages.dev/sqlite-otel/quickstart/
+- **API Reference**: https://manishs.pages.dev/sqlite-otel/api/
+- **CLI Reference**: https://manishs.pages.dev/sqlite-otel/cli/
+- **Deployment Guide**: https://manishs.pages.dev/sqlite-otel/deployment/
 
 ## Future Updates
 
@@ -74,4 +77,6 @@ To update documentation:
 ⚠️ **Action Required**: Complete the Cloudflare Pages setup manually:
 1. Go to https://dash.cloudflare.com/pages
 2. Follow the configuration steps above
-3. Deploy and verify at https://manishs.pages.dev/
+3. Deploy and verify at:
+   - Landing page: https://manishs.pages.dev/
+   - SQLite OTEL: https://manishs.pages.dev/sqlite-otel/
