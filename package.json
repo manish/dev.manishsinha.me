@@ -4,7 +4,7 @@
   "description": "Personal development website",
   "scripts": {
     "build": "npm run build:sqlite-otel",
-    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist/sqlite-otel && mkdir -p dist/sqlite-otel/docs && echo 'Copying original static site to root...' && cp -r sqlite-otel/site/* dist/sqlite-otel/ && echo 'Checking for MkDocs build...' && if [ -d mkdocs-build ]; then cp -r mkdocs-build/* dist/sqlite-otel/docs/ && echo 'MkDocs site copied to /docs/'; else echo 'Warning: mkdocs-build not found, using sqlite-otel/site as fallback' && cp -r sqlite-otel/site/* dist/sqlite-otel/docs/; fi && echo 'Build complete'",
+    "build:sqlite-otel": "echo 'Starting build...' && rm -rf dist && mkdir -p dist && echo 'Copying documentation site...' && cp -r sqlite-otel/site/* dist/ && echo 'Build complete - documentation available at root'",
     "dev": "npm run build && npx serve dist",
     "clean": "rm -rf dist"
   },
